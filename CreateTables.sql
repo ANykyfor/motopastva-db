@@ -23,3 +23,18 @@ CREATE TABLE Repairs (
     Cost DECIMAL(10, 2) CHECK (Cost >= 0),
     FOREIGN KEY (MotorcycleId) REFERENCES Motorcycles(MotorcycleId) ON DELETE CASCADE
 );
+CREATE TABLE MotorcycleTypes (
+    TypeId INT PRIMARY KEY IDENTITY(1,1),
+    TypeName NVARCHAR(50) NOT NULL UNIQUE
+);
+CREATE TABLE Motorcycles (
+    MotorcycleId INT PRIMARY KEY IDENTITY(1,1),
+    RiderId INT NOT NULL,
+    TypeId INT,
+    Brand NVARCHAR(100) NOT NULL,
+    Model NVARCHAR(100) NOT NULL,
+    Year INT CHECK (Year >= 1900 AND Year <= YEAR(GETDATE())),
+    VIN NVARCHAR(50) UNIQUE,
+    FOREIGN KEY (RiderId) REFERENCES Riders(RiderId) ON DELETE CASCADE,
+    FOREIGN KEY (TypeId) REFERENCES MotorcycleTypes(TypeId)
+);
