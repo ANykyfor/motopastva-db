@@ -21,4 +21,5 @@ CREATE TABLE Repairs (
     Description NVARCHAR(200) NOT NULL,
     RepairDate DATE NOT NULL,
     Cost DECIMAL(10, 2) CHECK (Cost >= 0),
-   );
+    FOREIGN KEY (MotorcycleId) REFERENCES Motorcycles(MotorcycleId) ON DELETE CASCADE
+);
