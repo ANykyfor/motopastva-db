@@ -15,3 +15,10 @@ CREATE TABLE UserRoles (
     FOREIGN KEY (UserId) REFERENCES Riders(RiderId) ON DELETE CASCADE,
     FOREIGN KEY (RoleId) REFERENCES Roles(RoleId) ON DELETE CASCADE
 );
+CREATE TABLE Repairs (
+    RepairId INT PRIMARY KEY IDENTITY(1,1),
+    MotorcycleId INT NOT NULL,
+    Description NVARCHAR(200) NOT NULL,
+    RepairDate DATE NOT NULL,
+    Cost DECIMAL(10, 2) CHECK (Cost >= 0),
+   );
