@@ -49,13 +49,4 @@ CREATE TABLE Trips (
     DistanceKm INT CHECK (DistanceKm > 0),
     FOREIGN KEY (RiderId) REFERENCES Riders(RiderId) ON DELETE CASCADE,
     FOREIGN KEY (MotorcycleId) REFERENCES Motorcycles(MotorcycleId) ON DELETE CASCADE
-);CREATE TABLE Trips (
-    TripId INT PRIMARY KEY IDENTITY(1,1),
-    RiderId INT NOT NULL,
-    MotorcycleId INT NOT NULL,
-    TripDate DATE NOT NULL,
-    Destination NVARCHAR(100) NOT NULL,
-    DistanceKm INT CHECK (DistanceKm > 0),
-    FOREIGN KEY (RiderId) REFERENCES Riders(RiderId),
-    FOREIGN KEY (MotorcycleId) REFERENCES Motorcycles(MotorcycleId)
 );
