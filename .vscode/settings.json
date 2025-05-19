@@ -1,0 +1,44 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "Motopastva",
+      "driver": "SQL Server/Azure",
+      "server": "np:\\\\.\\pipe\\LOCALDB#E2328725\\tsql\\query",
+      "authenticationType": "integrated",
+      "database": "Motopastva"
+    },
+    {
+      "dbDriver": "mssqlnodev8",
+      "connectionMethod": "Integrated",
+      "connectionTimeout": 15,
+      "sidePanelOptions": {
+        "inaccessibleDatabase": true,
+        "inaccessibleSchema": true
+      },
+      "previewLimit": 50,
+      "odbcDriver": "SQL Server / Azure",
+      "port": 1433,
+      "msnodesqlv8Options": {},
+      "driver": "SQL Server/Azure+",
+      "database": "master",
+      "name": "Motopastva",
+      "server": "np:\\\\.\\pipe\\LOCALDB#E2328725\\tsql\\query"
+    },
+    {
+      "dbDriver": "mssqlnodev8",
+      "connectionMethod": "Integrated",
+      "connectionTimeout": 15,
+      "sidePanelOptions": {
+        "inaccessibleDatabase": true,
+        "inaccessibleSchema": true
+      },
+      "previewLimit": 50,
+      "odbcDriver": "SQL Server / Azure",
+      "port": 1433,
+      "msnodesqlv8Options": {}, 
+      "database": "master",
+      "name": "Motopastva ",
+      "server": "np:\\\\.\\pipe\\LOCALDB#F238725\\tsql\\query"
+    }
+  ]
+}
